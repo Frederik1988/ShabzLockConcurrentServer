@@ -1,0 +1,11 @@
+C:\source\ShabzLockConcurrent\ShabzLockConcurrent\bin\Debug\netcoreapp2.1\ShabzLockConcurrent.deps.json
+C:\source\ShabzLockConcurrent\ShabzLockConcurrent\bin\Debug\netcoreapp2.1\ShabzLockConcurrent.runtimeconfig.json
+C:\source\ShabzLockConcurrent\ShabzLockConcurrent\bin\Debug\netcoreapp2.1\ShabzLockConcurrent.runtimeconfig.dev.json
+C:\source\ShabzLockConcurrent\ShabzLockConcurrent\bin\Debug\netcoreapp2.1\ShabzLockConcurrent.dll
+C:\source\ShabzLockConcurrent\ShabzLockConcurrent\obj\Debug\netcoreapp2.1\ShabzLockConcurrent.csprojAssemblyReference.cache
+C:\source\ShabzLockConcurrent\ShabzLockConcurrent\obj\Debug\netcoreapp2.1\ShabzLockConcurrent.csproj.CoreCompileInputs.cache
+C:\source\ShabzLockConcurrent\ShabzLockConcurrent\obj\Debug\netcoreapp2.1\ShabzLockConcurrent.AssemblyInfoInputs.cache
+C:\source\ShabzLockConcurrent\ShabzLockConcurrent\obj\Debug\netcoreapp2.1\ShabzLockConcurrent.AssemblyInfo.cs
+C:\source\ShabzLockConcurrent\ShabzLockConcurrent\bin\Debug\netcoreapp2.1\ShabzLockConcurrent.pdb
+C:\source\ShabzLockConcurrent\ShabzLockConcurrent\obj\Debug\netcoreapp2.1\ShabzLockConcurrent.dll
+C:\source\ShabzLockConcurrent\ShabzLockConcurrent\obj\Debug\netcoreapp2.1\ShabzLockConcurrent.pdb
