@@ -32,11 +32,12 @@ namespace ShabzLockConcurrent.Model
         }
         public static async Task<Lock> GetOneLockAsync(int id)
         {
+            Thread.Sleep(1500);
+
             string requestUri = uri + id;
             using (HttpClient client = new HttpClient())
             {
-                Thread.Sleep(1000);
-
+               
                 HttpResponseMessage response = await client.GetAsync(requestUri);
 
                 string str = await response.Content.ReadAsStringAsync();
@@ -49,6 +50,7 @@ namespace ShabzLockConcurrent.Model
 
         public static async Task<Lock> UpdateLockAsync(Lock newLock, int id)
         {
+            
             using (HttpClient client = new HttpClient())
             {
                 string requestUri = uri + id;
@@ -59,6 +61,7 @@ namespace ShabzLockConcurrent.Model
                 string str = await response.Content.ReadAsStringAsync();
                 Lock updateLock = JsonConvert.DeserializeObject<Lock>(str);
                 return updateLock;
+                
             }
 
         }
