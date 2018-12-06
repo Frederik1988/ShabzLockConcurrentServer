@@ -32,7 +32,7 @@ namespace ShabzLockConcurrent.Model
         }
         public static async Task<Lock> GetOneLockAsync(int id)
         {
-            string requestUri = uri + 1;
+            string requestUri = uri + id;
             using (HttpClient client = new HttpClient())
             {
                 Thread.Sleep(1000);
@@ -51,7 +51,7 @@ namespace ShabzLockConcurrent.Model
         {
             using (HttpClient client = new HttpClient())
             {
-                string requestUri = uri + 1;
+                string requestUri = uri + id;
                 var jsonString = JsonConvert.SerializeObject(newLock);
                 StringContent content = new StringContent(jsonString, Encoding.UTF8, "application/json");
 
