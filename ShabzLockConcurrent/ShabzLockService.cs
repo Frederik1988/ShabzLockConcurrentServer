@@ -78,7 +78,7 @@ namespace ShabzLockConcurrent
                             {
                                 streamWriter.WriteLine("l");
                                 doorLock = "unlocked";
-                                Task.Run(() => ShabzConsumer.UpdateLockAsync(new Lock(name, accessCode, true, dateRegistrered), 1));
+                                Task.Run(() => ShabzConsumer.UpdateLockAsync(new Lock(name, accessCode, true, dateRegistrered), lockId));
 
                                 byte[] buffer = new byte[connectionSocket.ReceiveBufferSize];
                                 int bytesRead = networkStream.Read(buffer, 0, connectionSocket.ReceiveBufferSize);
