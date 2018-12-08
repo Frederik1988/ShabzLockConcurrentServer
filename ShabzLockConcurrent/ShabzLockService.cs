@@ -39,9 +39,12 @@ namespace ShabzLockConcurrent
 
                 string name = shabzLock.Name;
 
+                string pythonName = name.ToUpper();
+
                 string accessCode = shabzLock.AccessCode;
 
                 string dateRegistrered = shabzLock.DateRegistered;
+
 
                 if (counter == 1)
                 {
@@ -49,17 +52,15 @@ namespace ShabzLockConcurrent
                     {
                         doorLock = "locked";
                     }
-                     counter++;
+                    counter++;
                 }
-                
 
                 if (status == "False" && doorLock == "unlocked")
                 {
-                    
 
                     if (counter > 1)
                     {
-                        streamWriter.WriteLine("o");
+                        streamWriter.WriteLine("o" + pythonName);
                         doorLock = "locked";
                         byte[] buffer = new byte[connectionSocket.ReceiveBufferSize];
                         int bytesRead = networkStream.Read(buffer, 0, connectionSocket.ReceiveBufferSize);
@@ -79,7 +80,7 @@ namespace ShabzLockConcurrent
                                 streamWriter.WriteLine("l");
                                 doorLock = "unlocked";
                                 Task.Run(() => ShabzConsumer.UpdateLockAsync(new Lock(name, accessCode, true, dateRegistrered), lockId));
-                                
+
                                 byte[] buffer = new byte[connectionSocket.ReceiveBufferSize];
                                 int bytesRead = networkStream.Read(buffer, 0, connectionSocket.ReceiveBufferSize);
 
@@ -94,7 +95,7 @@ namespace ShabzLockConcurrent
 
                 if (status == "True" && doorLock == "locked")
                 {
-                    
+
                     streamWriter.WriteLine("l");
                     doorLock = "unlocked";
 
@@ -103,9 +104,9 @@ namespace ShabzLockConcurrent
 
                     string dataRecieved = Encoding.ASCII.GetString(buffer, 0, bytesRead);
                     Console.WriteLine("Shabzlock says: " + dataRecieved);
-                  
+
                 }
-                
+
             }
         }
     }

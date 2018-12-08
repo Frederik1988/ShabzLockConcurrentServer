@@ -32,7 +32,7 @@ namespace ShabzLockConcurrent.Model
         }
         public static async Task<Lock> GetOneLockAsync(int id)
         {
-            Thread.Sleep(1500);
+            Thread.Sleep(1800);
 
             string requestUri = uri + id;
             using (HttpClient client = new HttpClient())
